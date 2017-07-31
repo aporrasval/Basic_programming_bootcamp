@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-# testing
-=======
-# Basic_programming_bootcamp
->>>>>>> 76ad19515309fb84a0b25d158ee2b35ab03ed9f7
+
+Computational Bootcamp.
+
+Day 1: Teaching the basics of terminal. Installing python and github using the command line.
+
+Day 2: Teaching how to use Github and the basics of python.
+
+Day 3: Working on assignments
