@@ -1,0 +1,304 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+		\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+		\HRule
+	\end{center}
+	\begin{flushright}
+		prepared by: Heidelberg participants
+	\end{flushright}
+	\begin{center}
+		{\Large \textbf{exercise: Dark matter and the virial theorem}}\\
+		\vspace*{2mm}
+		{\Large \textbf{Solutions}}
+		
+	\end{center}
+	\vspace{5mm}
+	
+	\begin{enumerate}[\itshape \bfseries 1.]
+		
+		\item \question{empirical approach to the virial theorem}\\
+		Please complete this table and compute the specific kinetic energy $T$, the specific potential energy $V$ and the ratio between the two. Does the virial law hold as well for specific kinetic and potential energies? You find the necessary data on all planets on Wikipedia, and please assume that the planets follow circular orbits.
+		
+		The specific kinetic energy i. e. kinetic energy divided by mass can be obtained by
+		\begin{equation}
+		T = \frac{1}{2}\left(\frac{2\pi r}{t}\right)^{2}
+		\end{equation}
+		
+		and the specific potential energy i. e. potential energy divided by mass by
+		\begin{equation}
+		V = -\frac{GM}{r}
+		\end{equation}
+		
+		where $G$ is Newton's gravitational constant and $M$ the mass of the sun.
+		
+		\begin{table}[h]
+			\begin{center}
+				\begin{tabular}{|c|cc|cc|c|}
+					\hline
+					planet & distance $r$ & orbital period $t$ & kinetic energy $T$ & potential energy $V$ & ratio $T/V$\\
+					& $10^{9}$ m & days & J/kg & J/kg & \\
+					\hline
+					Mercury & 58 & 88 & $1,2\cdot 10^{9}$ & $-2,3\cdot 10^{9}$ & -0,50\\
+					Venus & 108 & 225 & $6,1\cdot 10^{8}$ & $-1,2\cdot 10^{9}$ & -0,49\\
+					Earth & 150 & 365 & $4,5\cdot 10^{8}$ & $-8,9\cdot 10^{8}$ & -0,50\\
+					Mars & 228 & 687 & $2,9\cdot 10^{8}$ & $-5,9\cdot 10^{8}$ & -0,50 \\
+					Jupiter & 778 & 4330 & $8,5\cdot 10^{7}$ & $-1,7\cdot 10^{8}$ & -0,50 \\
+					Saturn & 1434 & 10585 & $4,8\cdot 10^{7}$ & $-9,3\cdot 10^{7}$ & -0,52 \\
+					Uranus & 2872 & 30660 & $2,3\cdot 10^{7}$ & $-4,6\cdot 10^{7}$ & -0,50 \\
+					Neptune & 4498 & 60225 & $1,5\cdot 10^{7}$ & $-3,0\cdot 10^{7}$ & -0,50 \\
+					\hline
+				\end{tabular}
+			\end{center}
+		\end{table}
+		
+		\setcounter{equation}{0}
+		\item \question{Kepler orbits and the virial theorem}
+		\begin{enumerate}[(a)]
+			\item
+			
+			The gravitational force $F_G$ acts as centripetal force $F_c$:
+			\begin{align*}
+			F_c &=F_G\\
+			\frac{mv^2}{r}&=G\frac{mM}{r^2}
+			\end{align*}
+			with $r$ as radius of the circle, $v$ as velocity, $m$ as mass of the planet and $M$ as mass of the sun.\\
+			It follows
+			\begin{align*}
+			v^2=\frac{GM}{r}
+			\end{align*}
+			
+			\item
+			
+			The kinetic energy is $T=\frac{1}{2}mv^2$. So if we use the formula of the potential energy 
+			\begin{align*}
+			V=-G\frac{mM}{r}
+			\end{align*}
+			and the result a), it follows
+			\begin{align*}
+			T=\frac{1}{2}mv^2=\frac{1}{2}m\cdot\frac{GM}{r}=-\frac{1}{2}V
+			\end{align*}
+			\item
+			
+			For a circular orbit, the radius $r$ is constant, thus also the potential energy $V$.\\
+			The total energy $E=T+V$ is also a constant.\\
+			It follows that $T$ is constant.
+		\end{enumerate}
+		
+		\setcounter{equation}{0}
+		\item \question{relationship to flat rotation curves}
+		\begin{enumerate}[(a)]
+			\item The Poisson equation reads: \\
+			
+			\begin{align*}
+			\nabla  \Phi = \frac{1}{r^2} \frac{d}{dr} (r^2 \frac{d\Phi}{dr}) = 4 \pi G \rho
+			\end{align*}
+			
+			For the density of a SIS profile, we have $\rho \propto r^{-2}$ and hence $\rho = \rho_0 r^{-2}$.\\             
+			This yields: \\
+			\begin{align*}
+			\frac{d}{dr} (r^2 \frac{d\Phi}{dr}) &= 4 \pi G \rho_0 \\
+			r^2 \frac{d\Phi}{dr} &= \int 4 \pi G \rho_0 dr = 4 \pi G \rho_0 r \\
+			\frac{d\Phi}{dr} &= 4 \pi G \rho_0 r^{-1} \\
+			\Phi(r) &= \int 4 \pi G \rho_0 r^{-1} dr \\
+			\end{align*}
+			
+			This leads to our final result: \\
+			\begin{align*}
+			\Phi(r) = 4 \pi G \rho_0 \ln \frac{r}{r_0}
+			\end{align*}
+			
+			
+			
+			
+			\item The orbital velocity is obtained by equating gravitational and centripetal force: 
+			
+			\begin{align*}
+			F_c = m \frac{v(r)^2}{r} = m \nabla \Phi &= m \frac{d}{dr} 4 \pi G \rho_0 \ln \frac{r}{r_0} = - F_g
+			\end{align*}
+			
+			This yields: 
+			\begin{align*}
+			m \frac{v(r)^2}{r} &= m 4 \pi G \rho_0 \frac{r_0}{r}\\
+			v(r) = \sqrt{4 \pi G \rho_0 r_0} \\
+			\end{align*}
+			
+			This result is independent of $r$; hence, the orbital velocity for objects in a SIS halo is constant even 				at large radii.
+			
+			\item The equation of motion is given by:
+			\begin{align*}
+			\ddot{r} &= - \nabla \Phi \\
+			\ddot{r} &= -r^2 \frac{\partial}{\partial r} 4 \pi G \rho_0 \ln \frac{r}{r_0} \\
+			\ddot{r} &= - 4 \pi G \rho_0 r_0 r \\
+			\end{align*}
+			
+			By defining $\omega = \sqrt{4 \pi G \rho_0 r_0}$, this differential equation is solved by the following expression: 
+			
+			\begin{align*}
+			r(t) &= r_0 \exp i \omega t
+			\end{align*}
+			
+			\item The escape velocity can be obtained by equating the kinetic energy of the escaping body with the work required to move the body from $r_0$ to infinity against the gravitational force: 
+			\begin{align*}
+			E_{kin} = \frac{m}{2} v_{esc}^2 = W &= - \int_{r_0}^{\infty} F_g \ dr = m \int_{r_0}^{\infty} \nabla \Phi  r \ dr = m \int_{r_0}^{\infty} \nabla \Phi dr 
+			\end{align*}
+			
+			However, this turns out to be infinite: 
+			
+			\begin{align*}
+			W &= 4 \pi G \rho_0 m \int_{r_0}^{\infty} \frac{1}{r} dr
+			\end{align*}
+			
+			Hence, the escape velocity from a SIS halo is infinite. This is due to the unphysical density singularity at the halo centre, which means that the total mass of the halo is also divergent. 
+			
+		\end{enumerate}
+		
+		\newpage
+		
+		\setcounter{equation}{0}
+		\item \question{virial theorem for the harmonic oscillator}
+		
+		The general solution for the harmonic oscillator
+		\begin{equation}
+		\ddot{x}=-\omega^2x
+		\end{equation}
+		with \(\omega^2=g/l\) and the initial conditions (\(x(0)=x_0, \dot{x}(0)=v_0\)) is:
+		\begin{equation}
+		x(t)=x_0\cos\omega t+\frac{v_0}{\omega}\sin\omega t
+		\end{equation}
+		
+		\begin{enumerate}[(a)]
+			\item energy conservation
+		\end{enumerate}
+		
+		The kinetic energy is:
+		\begin{align}
+		T&=\frac{1}{2}\dot{x}^2\\
+		&=\frac{1}{2}\left(v_0\cos\omega t-x_0\omega\sin\omega t\right)^2\\
+		&=\frac{1}{2}\left(v_0^2\cos^2\omega t-2x_0v_0\omega\sin\omega t\cos\omega t+x_0^2\omega^2\sin^2\omega t\right)\\
+		&=\frac{v_0^2+x_0^2\omega^2}{4}+\frac{v_0^2-x_0^2\omega^2}{4}\cos 2\omega t-\frac{x_0v_0\omega}{2}\sin2\omega t
+		\end{align}
+		Whereas the potential energy satisfies:
+		\begin{align}
+		V&=\frac{1}{2}\omega^2x^2\\
+		&=\frac{1}{2}\omega^2\left(x_0\cos\omega t+\frac{v_0}{\omega}\sin\omega t\right)^2\\
+		&=\frac{1}{2}\left(\omega^2x_0^2\cos^2\omega t+2x_0v_0\omega\sin\omega t\cos\omega t+v_0^2\sin^2\omega t\right)\\
+		&=\frac{x_0^2\omega^2+v_0^2}{4}+\frac{x_0^2\omega^2-v_0^2}{4}\cos 2\omega t+\frac{x_0v_0\omega}{2}\sin2\omega t
+		\end{align}
+		from which follows, that:
+		\begin{align}
+		E&=T+V\\
+		&=\frac{v_0^2+x_0^2\omega^2}{2}
+		\end{align}
+		which is constant for all times \(t\) because it is time independent.
+		
+		\begin{enumerate}[(b)]
+			\item energy equalities
+		\end{enumerate}
+		
+		To calculate the average, one may use the identities obtained above using \(\tau=2\pi/\omega\)
+		\begin{align}
+		\left\langle x^2\right\rangle&=\frac{1}{\tau}\int_0^\tau\mathrm{d}t~x^2(t)\\
+		&=\frac{1}{\tau}\int_0^\tau\mathrm{d}t\left(\frac{x_0^2+v_0^2/\omega^2}{2}+\frac{x_0^2-v_0^2/\omega^2}{2}\cos 2\omega t+\frac{x_0v_0}{\omega}\sin2\omega t\right)\\
+		&=\frac{\omega}{2\pi}\left[\frac{x_0^2+v_0^2/\omega^2}{2}t+\frac{x_0^2-v_0^2/\omega^2}{4\omega}\sin 2\omega t-\frac{x_0v_0}{2\omega^2}\cos2\omega t\right]^{2\pi/\omega}_0\\
+		&=\frac{\omega}{2\pi}\left[\frac{x_0^2+v_0^2/\omega^2}{2}\frac{2\pi}{\omega}\right]\\
+		&=\frac{x_0^2+v_0^2/\omega^2}{2}
+		\end{align}
+		And for the kinetic terms:
+		\begin{align}
+		\left\langle\dot{x}^2\right\rangle&=\frac{1}{\tau}\int_0^\tau\mathrm{d}t~\dot{x}^2(t)\\
+		&=\frac{1}{\tau}\int_0^\tau\mathrm{d}t\left(\frac{v_0^2+x_0^2\omega^2}{2}+\frac{v_0^2-x_0^2\omega^2}{2}\cos 2\omega t-x_0v_0\omega\sin2\omega t\right)\\
+		&=\frac{\omega}{2\pi}\left[\frac{v_0^2+x_0^2\omega^2}{2}t+\frac{v_0^2-x_0^2\omega^2}{4\omega}\sin 2\omega t-\frac{x_0v_0}{2}\cos2\omega t\right]^{2\pi/\omega}_0\\
+		&=\frac{\omega}{2\pi}\left[\frac{v_0^2+x_0^2\omega^2}{2}\frac{2\pi}{\omega}\right]\\
+		&=\frac{v_0^2+x_0^2\omega^2}{2}
+		\end{align}
+		So one may see that with:
+		\begin{align}
+		\left\langle T\right\rangle&=\frac{1}{2}\left\langle\dot{x}^2\right\rangle\\
+		&=\frac{v_0^2+x_0^2\omega^2}{4}\\
+		\left\langle V\right\rangle&=\frac{1}{2}\omega^2\left\langle x^2\right\rangle\\
+		&=\frac{x_0^2\omega^2+v_0^2}{4}
+		\end{align}
+		The virial theorem \(\left\langle T\right\rangle=\left\langle V\right\rangle\) holds stand.
+		
+		\setcounter{equation}{0}
+		\item \question{mechanical similarity and the virial theorem}
+		\begin{enumerate}[(a)]
+			\item Why can the virial theorem only be applied to the first and last case? \\
+			
+			For the virial theorem to be applied the motion must be constraint in space and momentum, because of the averaging. (see below for more information)  \\ \\
+			
+			\mbox{ \centering
+				\renewcommand{\arraystretch}{1.2}
+				\begin{tabular}{|r|l|}
+					\hline
+					Kepler &  ellipse $\Rightarrow \exists ~ r_{max}, p_{max} < \infty$ \\ \hline
+					flat potential &  $r \xrightarrow{t \rightarrow \infty} \infty$, if $p \neq 0$ \\ \hline
+					inclined plane	& $r, p \xrightarrow{t \rightarrow \infty} \infty$ \\ \hline
+					pendulum & $\exists ~ \theta_{max}, p_{max} < \infty$ \\ \hline
+				\end{tabular}}
+				\vspace{0.5cm} \\
+				\textit{Derivation of the virial theorem:} \\
+				
+				\begin{align}
+				&2T = m\dot{x}^2 = p\dot{x} = \frac{\mathrm{d}}{\mathrm{d}t} (px) - \dot{p}x = \frac{\mathrm{d}}{\mathrm{d}t} (px) + x \frac{\partial V}{\partial x} \\
+				&\Rightarrow 2T - x \frac{\partial V}{\partial x} = \frac{\mathrm{d}}{\mathrm{d}t} (px) \\
+				&\Rightarrow \langle 2T - x \frac{\partial V}{\partial x}\rangle = \langle \frac{\mathrm{d}}{\mathrm{d}t} (px) \rangle = \lim\limits_{t \rightarrow \infty} \frac{1}{t} \int_{0}^{t} \mathrm{d}t' \frac{\mathrm{d}}{\mathrm{d}t'} (px) \\
+				& = \lim\limits_{t \rightarrow \infty} \frac{1}{t} \left[ p(t)x(t)-p(0)x(0) \right] = 0  \ \text{(If p and x are constrained)}\\
+				&\Rightarrow 2 \langle T \rangle = \langle x \frac{\partial V}{\partial x} \rangle\\
+				&\Rightarrow 2 \langle T \rangle = k \langle V \rangle \ \text{(If V is homogeneous of grade k)}
+				\end{align} 
+				\item Can you guess with you knowledge of the Kepler law that kinetic and potential energy need to be proportional to each other?\\
+				From mechanical similarity follows $r^3 \propto t^2 \Rightarrow (t/r)^2 \propto r^{-1}$ \\
+				\item Boosting into another frame by doing a Galilei-transform changes the kinetic energy: Would this affect the virial theorem?\\
+				Yes. For an observer moving relative to the system, the motion is in general not constraint.
+				$$ T' = T + T_{boost} \Rightarrow \langle T' \rangle = \langle T \rangle + T_{boost}$$
+			\end{enumerate}
+			
+			\setcounter{equation}{0}
+			\item \question{application to clusters}\\
+			For $\Phi\propto r^{-1}$ the virial theorem is 
+			\begin{align}
+			\left< T\right> &= -\frac{1}{2}\left< V\right>\\
+			&\propto -\frac{1}{2}r^{-1}\\
+			\end{align}
+			If we measure kinetic energies too large by a foctor $\approx 100$ we get $\left < T'\right >=100\left < T\right >$ and can explain this by changing the potential to $\Phi\propto r^{-n}$:
+			\begin{align}
+			\left < T'\right > &= -\frac{n}{2}\left < V'\right >\\
+			100\left < T \right > &\propto -\frac{n}{2} r^{-n}
+			\end{align} 
+			Because this must hold for all $r$ we predict $n=100$ to explain the measured kinetic energies.
+			
+			
+			
+		\end{enumerate}
+	\end{document}

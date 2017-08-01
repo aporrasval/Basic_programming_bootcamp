@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\HRule
+\end{center}
+\begin{flushright}
+prepared by: Padova participants and BMS
+\end{flushright}
+\begin{center}
+{\Large \textbf{exercise: Planck-spectrum and the CMB}}
+\end{center}
+\vspace{5mm}
+
+\begin{enumerate}[\itshape \bfseries 1.]
+
+\item \question{properties of the Planck-spectrum}\\
+Let's derive the fundamental properties of the Planck-spectrum,
+\begin{equation}
+S(\nu) = S_0\frac{\nu^3}{\exp(h\nu/(k_BT))-1}
+\quad\rightarrow\quad
+S(\nu) = S_0\nu^3\exp(-h\nu/(k_BT)),
+\end{equation}
+by using Wien's approximation (the second expression), which makes the integrals easier. The constant $S_0$ depends only on numbers, natural and mathematical constants.
+\begin{enumerate}[(a)]
+\item{Please compute the total intensity $\int_0^\infty\dd\nu\:S(\nu)$ and show that it is $\propto T^4$.}
+\item{Show that the position $\nu_m$ of the maximum scales $\nu_m\propto T$.}
+\item{Please derive the scaling of the mean
+\begin{equation}
+\bra\nu\ket = \frac{\int_0^\infty\dd\nu\:\nu S(\nu)}{\int_0^\infty\dd\nu\:S(\nu)}
+\end{equation}
+and show that it is proportional to $T$.}
+\item{Is there a fixed ratio between $\bra\nu\ket$ and $\nu_m$?}
+\item{In which limit is Wien's approximation applicable?}
+\item{Do the scaling behaviours with $T$ derived above depend on the details of the distribution?}
+\end{enumerate}
+
+\item \question{Wien's distribution function}\\
+Let's stick for a second with Wien's distribution function in $n$ dimensions,
+\begin{equation}
+S(\nu) = S_0\nu^n\exp(-h\nu/(k_BT)),
+\end{equation}
+and derive a few general properties, which will hold for the Planck-distribution as well (although the computations are more complicated).
+\begin{enumerate}[(a)]
+\item{Please begin by showing that
+\begin{equation}
+\int_0^\infty\dd x\:x^n\exp(-x) = n!
+\end{equation}
+using $n$-fold integration by parts.}
+\item{Alternatively, please show the recursion relation of the $\Gamma$-function, 
+\begin{equation}
+\Gamma(n) = (n-1)\Gamma(n-1),
+\quad\mathrm{together~with}\quad
+\Gamma(0) = 1.
+\end{equation}
+The $\Gamma$-function is defined by 
+\begin{equation}
+\Gamma(n) = \int_0^\infty\dd x\:x^{n-1}\exp(-x),
+\end{equation}
+and is related to the factorial by $\Gamma(n) = (n-1)!$}
+\item{What scaling of the moments
+\begin{equation}
+\bra\nu^m\ket = \frac{\int_0^\infty\dd\nu\:\nu^mS(\nu)}{\int_0^\infty\dd\nu\:S(\nu)}
+\end{equation}
+with temperature $T$ do you expect?
+}
+\item{Please show that the skewness parameter $s = \bra\nu^3\ket/\bra\nu^2\ket^{3/2}$ and the kurtosis parameter $k = \bra\nu^4\ket/\bra\nu^2\ket^2$ are independent from the temperature $T$. What would be the physical interpretation of $s$ and $k$?}
+\item{Would an equivalent result be true for the parameter $\bra\nu^{2n}\ket/\bra\nu^2\ket^n$?}
+\end{enumerate}
+
+\item \question{Planck-spectra at cosmological distances}\\
+Imagine you observe an object emitting a Planck-spectrum at a cosmological distance, such that all photons arrive with a redshifted frequency $\nu\rightarrow a\nu=\nu / (1+z)$ with scale factor $a$ (remember $a<1$) and redshift $z$. A couple of students discusses the fact that the temperature scales with $T\propto 1/a$ and that the photons are redshifted: What's your opinion on the different arguments?
+\begin{enumerate}[(a)]
+\item{Johannes from Heidelberg says: The temperature $T$ of a photon gas is linked to the thermal energy $E$ by $E=k_BT$. Then, the relativistic dispersion relation of the photons assumes $E = cp$ with the momentum $p$. The momentum $p$ is given by the de Broglie-relationship as $p=h/\lambda$. If now the photon wavelength is changed $\lambda\rightarrow a\lambda$, the temperature needs to scale $T\propto 1/a$.}
+\item{Antonia from Padova says: What about a purely thermodynamical argument? A gas of photons has an adiabatic index of $\kappa=4/3$, and the Hubble expansion is an adiabatic change of state, because there is no thermal energy created or dissipated. Then, the adiabatic invariant says that $TV^{\kappa-1}$ is conserved, which gives me $T\propto 1/a$ with $V\propto a^3$. And I understand why entropy is conserved but not energy.}
+\item{Marlene from Jena says: Due to the Hubble-expansion, every point is in recession motion with respect to every other point. If a photon gets scattered into your direction, the scattering particle will necessarily move away from you, leading to a lower perceived energy and a larger wavelength. It's important to view it like that because a photon gas can not change its state without interaction due to the linearity of electrodynamics, and this argument shows that it's a kinematical effect: It's a similarity transform of the Planck-spectrum.}
+\item{Lorenzo from Florence says: It's important for the Planck-spectrum that the mean particle separation and the thermal wavelength are identical. You can only arrange for that if $T\propto 1/a$ if the particle separation increases $\propto a$. I'm only assuming that the number of photons is conserved, but not their energy, and that everything stays in equilibrium.}
+\end{enumerate}
+
+\item \question{CMB as a source of energy}\\
+A Carnot-engine converts thermal energy taken from two reservoirs at different temperatures into mechanical energy at the efficiency $\eta = 1-T_2/T_1$.
+\begin{enumerate}[(a)]
+\item{Estimate if one can use the temperature anisotropies in the CMB of $\Delta T/T\simeq 10^{-5}$ to generate mechanical energy. How much power could you realistically generate? Construct a machine that converts radiation power into mechanical energy.}
+\item{Could you use the time evolution of the CMB-temperature for this purpose? You know already that $T\propto 1/a$, so please construct a machine that produces energy from the CMB.}
+\item{Why does a solar cell transform the radiation from the Sun into electrical energy? One might argue that the Planck-spectrum is that of thermal equilibrium in which case the mechanical work is zero: Due to the first law, mechanical work can not be performed in thermal equilibrium. (please be careful: trick question)}
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\HRule
+\end{center}
+\begin{flushright}
+prepared by: Heidelberg participants
+\end{flushright}
+\begin{center}
+{\Large \textbf{exercise: Dark matter and the virial theorem}}
+\end{center}
+\vspace{5mm}
+
+\begin{enumerate}[\itshape \bfseries 1.]
+
+\item \question{empirical approach to the virial theorem}\\
+Please complete this table and compute the specific kinetic energy $T$, the specific potential energy $V$ and the ratio between the two. Does the virial law hold as well for specific kinetic and potential energies? You find the necessary data on all planets on Wikipedia, and please assume that the planets follow circular orbits.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|ll|ll|l|}
+\hline
+planet & distance $r$ & orbital period $t$ & kinetic energy $T$ & potential energy $V$ & ratio $T/V$\\
+\hline
+Mercury & & & & & \\
+Venus & & & & & \\
+Earth & & & & & \\
+Mars & & & & & \\
+Jupiter & & & & & \\
+Saturn & & & & & \\
+Uranus & & & & & \\
+Neptune & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\item \question{Kepler orbits and the virial theorem}\\
+Why do the planets follow orbits with a fixed ratio between kinetic and potential energy?
+\begin{enumerate}[(a)]
+\item{Please start by deriving a relationship between orbital velocity $\upsilon$ and distance from a Newtonian calculation for a circular orbit.}
+\item{For that orbit, predict the kinetic energy from the potential energy. Is there a fixed ratio between the two?}
+\item{The virial theorem is only valid for time-averaged quantities: Why are the energies constant for a circular orbit, implying that you don't have to average?}
+\end{enumerate}
+
+
+\item \question{relationship to flat rotation curves}\\
+An important model for the distribution of (dark) matter inside a halo is the density profile $\rho\propto r^{-2}$ (called isothermal sphere), which has a number of important consequences:
+\begin{enumerate}[(a)]
+\item{Please compute the potential $\Phi$ of a density profile $\rho\propto r^{-2}$. This type of density profile is typical for dark matter haloes at intermediate distances. The solution for $\Phi$ follows from the Poisson equation $\Delta\Phi = 4\pi G\rho$ assuming spherical symmetry,
+\begin{equation}
+\Delta\Phi = \frac{1}{r^2}\frac{\dd}{\dd r}\left(r^2\frac{\dd\Phi}{\dd r}\right) = 4\pi G\rho.
+\end{equation}
+}
+\item{Now, derive a relationship between the velocity $\upsilon(r)$ of a star following a circular orbit at the distance $r$ from the halo centre: Do you find that $\rho\propto r^{-2}$ enforces $\upsilon(r) = \mathrm{const}$?}
+\item{Next, solve the equation of motion $\ddot{r} = -\nabla\Phi$ for a star oscillating in that halo through the centre. Do you find a consequence of the specific profile $\rho\propto r^{-2}$?}
+\item{What's the escape velocity from a singular isothermal sphere?}
+\end{enumerate}
+
+
+\item \question{virial theorem for the harmonic oscillator}\\
+Please show for a harmonic pendulum $\ddot{x} = -g/l\:x$ (with the gravitational acceleration $g$ and the pendulum length $l$) that the
+\begin{enumerate}[(a)]
+\item total energy is conserved at every instant $t$.
+\item average kinetic and potential energies are equal. Please use
+\begin{equation}
+\bra x^2\ket = \frac{1}{\tau}\int_0^\tau\dd t\:x^2(t)
+\quad\mathrm{and}\quad
+\bra \dot{x}^2\ket = \frac{1}{\tau}\int_0^\tau\dd t\:\dot{x}^2(t)
+\end{equation}
+as definitions of the average, with the oscillation period $\tau = 2\pi\sqrt{l/g}$.
+\end{enumerate}
+
+
+\item \question{mechanical similarity and the virial theorem}\\
+Mechanical similarity implies the relationship $r^{2-n}\propto t^2$ between the length scale $r$ and the time scale $t$ in mechanical systems with a potential $\Phi\propto r^n$. Collecting results for the 4 most common potentials leads to:
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|lll|}
+\hline
+system & potential & similarity & remark\\
+\hline
+Kepler-problem & $\Phi\propto r^{-1}$ & $r^3\propto t^2$ & Kepler's law\\
+flat potential & $\Phi=\mathrm{const}$ & $r\propto t$ & inertial motion\\
+inclined plane & $\Phi\propto r$ & $r\propto t^2$ & constant acceleration\\
+pendulum & $\Phi\propto r^2$ & $t = \mathrm{const}$ & isochrony\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{enumerate}[(a)]
+\item{Why can the virial theorem only be applied to the first and the last case?}
+\item{Can you guess with you knowledge of the Kepler law that kinetic and potential energy need to be proportional to each other?}
+\item{Boosting into another frame by doing a Galilei-transform changes the kinetic energy: Would this affect the virial theorem?}
+\end{enumerate}
+
+
+\item \question{application to clusters}\\
+The galaxies inside a cluster have kinetic energies that are a factor of $\sim100$ too large, if only the visible matter gravitates: Could you reconcile this by changing the gravitational potential from $\Phi\propto 1/r$ to $\Phi\propto 1/r^n$? Can you predict a number for $n$ from the virial theorem?
+
+
+\end{enumerate}
+\end{document}
