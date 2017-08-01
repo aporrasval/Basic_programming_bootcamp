@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\HRule
+\end{center}
+\begin{flushright}
+prepared by: Florence participants and BMS
+\end{flushright}
+\begin{center}
+{\Large \textbf{exercise: Supernova-cosmology and dark energy}}
+\end{center}
+\vspace{5mm}
+
+\begin{enumerate}[\itshape \bfseries 1.]
+
+\item \question{light-propagation in FLRW-spacetimes}\\
+Photons travel along null geodesics, $\dd s^2=0$, in any spacetime. 
+\begin{enumerate}[(a)]
+\item{Please show that by introducing {\em conformal time $\tau$} in a suitable definition, one recovers Minkowskian light propagation $c\tau = \pm\chi$ in comoving distance $\chi$ and conformal time $\tau$ for FLRW-space times,
+\begin{equation}
+\dd s^2 = c^2\dd t^2 - a^2(t)\dd\chi^2,
+\end{equation}
+which we have assumed to be spatially flat for simplicity.}
+\item{What's the relationship between conformal time $\tau$ and cosmic time $t$? What would the watch of a cosmological observer display?}
+\item{Please compute the conformal age of the Universe given a Hubble function $H(a)$,
+\begin{equation}
+H(a) = H_0 a^{-3(1+w)/2}
+\end{equation}
+which is filled up to the critical density with a fluid with a fixed equation of state $w$.
+}
+\item{In applying $\dd s^2=0$ to the FLRW-metric we have assumed a radial geodesic - is this a restriction?}
+\item{Please draw a diagram of a photon propagating from a distant galaxy to us in conformal coordinates for a cosmology of your choice, with markings on the light-cone corresponding to equidistant $\Delta a$.}
+\end{enumerate}
+
+
+\item \question{light-propagation in perturbed metrics}\\
+The weakly perturbed ($\left|\Phi\right|\ll c^2$) Minkowskian metric is given by 
+\begin{equation}
+\dd s^2 = \left(1+2\frac{\Phi}{c^2}\right) c^2\dd t^2 - \left(1-2\frac{\Phi}{c^2}\right)\dd x_i\dd x^i
+\end{equation}
+with the Newtonian potential $\Phi$. Please compute the effective speed of propagation $c^\prime = \dd\left|x\right|/\dd t$ for a photon following a null geodesic $\dd s^2=0$. Please Taylor-expand the expression in the weak-field limit $\left|\Phi\right|\ll c^2$: Can you assign an effective index of refraction to a region of space with a nonzero potential?
+
+
+\item \question{classical potentials including a cosmological constant}\\
+The field equation of classical gravity including a cosmological constant $\lambda$ is given by
+\begin{equation}
+\Delta\Phi = C(n) G\rho + \lambda
+\end{equation}
+\begin{enumerate}
+\item{Solve the field equation for $n$ dimensions outside a spherically symmetric and static matter distribution $\rho$. You find an expression for the Laplace-operator in spherical coordinates for $n$ dimensions on Wikipedia, as well as for the solid angle element $C(n)$, with $C(3)=4\pi$. Also, please set as the total mass $M$
+\begin{equation}
+M = C(n)\int_0^r\dd r^\prime (r^\prime)^n\rho(r)
+\end{equation}
+}
+\item{Please show, that both source terms individually give rise to power-law solutions for $\Phi(r)$.}
+\item{Is there a distance where the attractive part from the $\rho$-terms is equal to the repulsive $\lambda$-term?}
+\end{enumerate}
+
+
+\item \question{physics close to the horizon}\\
+Why is it necessary to observe supernovae at the Hubble distance $c/H_0$ to see the dimming in accelerated cosmologies? Please start at considering the curvature scale of the Universe: A convenient quantisation of curvature might be the Ricci-scalar $R = 6H^2(1-q)$ for flat FLRW-models.
+\begin{enumerate}[(a)]
+\item{Can you define a distance scale $d$ or a time scale from $R$?}
+\item{What happens on scales $\ll d$, what on scales $\gg d$?}
+\end{enumerate}
+
+
+\item \question{measure cosmic acceleration}\\
+The luminosity distance $d_\mathrm{lum}(z)$ in a spatially flat FLRW-universe is given by
+\begin{equation}
+d_\mathrm{lum}(z) = (1+z)\int_0^z\mathrm{d}z^\prime\:\frac{1}{H(z^\prime)}
+\end{equation}
+with the Hubble function $H(z)$. Let's assume that the Universe is filled with a cosmological fluid up to the critical density with a fluid with equation of state $w$, such that the Hubble function is
+\begin{equation}
+H(z) = H_0 (1+z)^\frac{3(1+w)}{2}.
+\end{equation}
+\begin{enumerate}
+\item{For this type of cosmology you will obtain acceleration if $w<-1/3$ and deceleration for $w>-1/3$: Please show this by computing the deceleration parameter $q=-\ddot{a}a/\dot{a}^2$ from the Hubble-function $H=\dot{a}/a$, with the relation $a=1/(1+z)$.}
+\item{Please show that in accelerated universes supernovae appear systematically dimmer, because $d_\mathrm{lum}$ is always larger than in a non-accelerating universe.}
+\item{Is it true that $d_\mathrm{lum}$ is systematically smaller in a decelerating universe?}
+\item{Would the expression for $d_\mathrm{lum}$ still be valid if the universe was contracting instead of expanding? What correction would you need to apply?}
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

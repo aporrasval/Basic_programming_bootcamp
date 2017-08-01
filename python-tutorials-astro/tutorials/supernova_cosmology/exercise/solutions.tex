@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ii}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\begin{center}
+		\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+		\HRule
+	\end{center}
+	\begin{flushright}
+		prepared by: Florence participants and BMS
+	\end{flushright}
+	\begin{center}
+		{\Large \textbf{exercise: Supernova-cosmology and dark energy}}\\
+		\vspace*{2mm}
+		{\Large \textbf{Solutions}}
+		
+	\end{center}
+	\vspace{5mm}
+	
+	\begin{enumerate}[\itshape \bfseries 1.]
+		
+		\item \question{light-propagation in FLRW-spacetimes}\\
+		Photons travel along null geodesics, $\dd s^2=0$, in any spacetime. 
+		\begin{enumerate}[(a)]
+			\item
+			\item
+			\item
+			\item
+			\item
+		\end{enumerate}
+		
+		
+		\item \question{light-propagation in perturbed metrics}\\
+		\begin{align}
+		ds^2=\left(1+2\frac{\Phi}{c^2}\right)c^2dt^2-\left(1-2\frac{\Phi}{c^2}\right)dx^2 
+		\end{align}
+		With $ds^2=0$:
+		\begin{align}
+		\left( 1+\frac{2\Phi}{c^2}\right)c^2dt^2 &= \left(1-\frac{2\Phi}{c^2}\right) dx^2\\
+		\frac{dx}{dt}&=\pm c\sqrt{\frac{1+\frac{2\Phi}{c^2}}{1-\frac{2\Phi}{c^2}}}
+		\end{align}
+		With $\frac{1}{1-\epsilon}\approx 1+\epsilon$ for small $\epsilon$:
+		\begin{align}
+		\frac{dx}{dt}\approx\pm c\left(1+\frac{2\Phi}{c^2}\right)
+		\end{align} 
+		For a non-zero $\Phi$ this is not equal to $c$! \\
+		We assign an effective index of refraction by:
+		\begin{align}
+		n(\Phi)=\frac{dx/dt}{c}\approx \left(1+\frac{2\Phi}{c^2}\right)
+		\end{align}
+		
+		\item \question{classical potentials including a cosmological constant}\\
+		The field equation of classical gravity including a cosmological constant $\lambda$ is given by
+		\begin{equation}
+		\Delta\Phi = C(n) G\rho + \lambda
+		\end{equation}
+		(a) field calculation\\
+		Using the n-dimensional Laplacian \[\Delta=\frac{1}{r^{n-1}}\left(\frac{\partial}{\partial r}\left(r^{n-1}\frac{\partial}{\partial r}\right)+\Delta_{S^{n-1}}\right)\]
+		Assuming spherical symmetry one may neglect the angular Laplace-Beltrami operator \(\Delta_{S^{n-1}}\).
+		Respecting the total mass \[M=C(n)\int_0^r\textrm{d}r'\left(r'\right)^{n-1}\rho(r')\]
+		Now it is possible to simply integrate the field equation starting with:
+		\begin{align}
+		  \Delta\Phi&=\frac{1}{r^{n-1}}\frac{\partial}{\partial r}\left(r^{n-1}\frac{\partial\Phi}{\partial r}\right)\\
+		  &=C(n)G\rho(r)+\lambda\\
+		  r^{n-1}\frac{\partial\Phi}{\partial r}&=\int_0^r\textrm{d}r'\left(C(n)G\left(r'\right)^{n-1}\rho\left(r'\right)+\left(r'\right)^{n-1}\lambda\right)\\
+		  &=GM+\frac{\lambda}{n}r^n\\
+		  \frac{\partial\Phi}{\partial r}&=\frac{GM}{r^{n-1}}+\frac{\lambda r}{n}\\
+		  \Phi&=-\frac{GM}{\left(n-2\right)r^{n-2}}+\frac{\lambda r^2}{2n}
+		\end{align}
+		(b) power-law solutions\\
+		Following the calculation one may see that each source term corresponds to an individual power-law:
+		\begin{align*}
+		  C(n)G\rho(r) ~~~ &\Rightarrow ~~~ -\frac{GM}{\left(n-2\right)r^{n-2}}\\
+		  \lambda ~~~ &\Rightarrow ~~~ \frac{\lambda r^2}{2n}
+		\end{align*}
+		Whereas the \(\lambda\)-term corresponds to a repulsive potential.\\
+		(c) equilibrium\\
+		To find an equilibrium distance one must set \(\Phi\left(r_\textrm{eq}\right)=0\)
+		\end{enumerate}
+		\begin{align}
+		  \frac{GM}{\left(n-2\right)r_\textrm{eq}^{n-2}}&=\frac{\lambda r_\textrm{eq}^2}{2n}\\
+		  \frac{\lambda r_\textrm{eq}^n}{2n}&=\frac{GM}{n-2}
+		\end{align}
+		from which follows immediatly:
+		\begin{equation}
+		  r_\textrm{eq}=\sqrt[n]{\frac{GM}{\lambda}\frac{2n}{n-2}}
+		\end{equation}
+		
+        \begin{enumerate}
+        \setcounter{enumi}{3}
+		\item \question{physics close to the horizon}\\
+		Why is it necessary to observe supernovae at the Hubble distance $c/H_0$ to see the dimming in accelerated cosmologies? Please start at considering the curvature scale of the Universe: A convenient quantisation of curvature might be the Ricci-scalar $R = 6H^2(1-q)$ for flat FLRW-models.
+		\begin{enumerate}[(a)]
+			\item
+			\item 
+		\end{enumerate}
+		
+		
+		\item \question{measure cosmic acceleration}\\
+		The luminosity distance $d_\mathrm{lum}(z)$ in a spatially flat FLRW-universe is given by
+		\begin{equation}
+		d_\mathrm{lum}(z) = (1+z)\int_0^z\mathrm{d}z^\prime\:\frac{1}{H(z^\prime)}
+		\end{equation}
+		with the Hubble function $H(z)$. Let's assume that the Universe is filled with a cosmological fluid up to the critical density with a fluid with equation of state $w$, such that the Hubble function is
+		\begin{equation}
+		H(z) = H_0 (1+z)^\frac{3(1+w)}{2}.
+		\end{equation}
+		\begin{enumerate}
+			\item
+					By definition:
+					\begin{align*}
+	H=\frac{\dot{a}}{a} \text{ and } q=-\frac{\ddot{a}a}{\dot{a}^2}
+		\end{align*}
+		It follows
+		\begin{align*}
+		\dot{H}&=\frac{\ddot{a}a-\dot{a}^2}{a^2}=\frac{\ddot{a}a}{a^2}-H^2		
+		\end{align*}
+		So we get
+		\begin{align*}
+		\frac{\dot{H}}{H^2}&=\frac{\ddot{a}a}{\dot{a}^2}-1=-q-1\\
+		q&=-(\frac{\dot{H}}{H^2}+1)	
+		\end{align*}
+	
+		
+		We also have
+		\begin{align*}
+		H=H_0\cdot(1+z)^{\frac{3(1+w)}{2}}=H_0\cdot a^{\frac{-3(1+w)}{2}}
+		\end{align*}
+		and
+		\begin{align*}
+		\dot{H}&=H_0\left(\frac{-3(1+w)}{2}\right)\cdot a^{\frac{-3(1+w)}{2}}\cdot \dot{a}\\
+			  &=H_0\cdot a^{\frac{-3(1+w)}{2}}\cdot\frac{\dot{a}}{a}\cdot\left(\frac{-3(1+w)}{2}\right)\\
+			  &=H^2\cdot \left(\frac{-3(1+w)}{2}\right)
+		\end{align*}	
+		so
+		\begin{align*}
+		q=-\left(\frac{-3(1+w)}{2}+1\right)=\frac{1}{2}(3w+1)
+		\end{align*}
+		and obviously
+		\begin{align*}
+		q<0 \text{ for } w<-\frac{1}{3}\\
+		q>0 \text{ for } w>-\frac{1}{3}
+		\end{align*}	
+										
+			\item
+				First, we consider the case $w=-\frac{1}{3}$ (non-accelerating universe):
+				\begin{align*}
+			H=H_0(1+z)^{\frac{3(1+w)}{2}}=H_0(1+z)\\
+\end{align*}	
+\begin{align*}
+d_{lum,1}&=(1+z)\int_0^z \! \frac{1}{H(z')} \, \mathrm{d}z'\\
+			&=(1+z)\int_0^z \! \frac{1}{H_0(1+z')} \, \mathrm{d}z'\\
+			&=\frac{1+z}{H_0}ln(1+z)
+\end{align*}						
+	Now, we consider the case $w<-\frac{1}{3}$ (accelerating universe):
+	\begin{align*}
+				d_{lum,2}&=(1+z)\int_0^z \! \frac{1}{H(z')} \, \mathrm{d}z'\\
+				&=\frac{1+z}{H_0}\int_0^z \! (1+z')^{\frac{-3(1+w)}{2}} \, \mathrm{d}z'\\
+				&=\frac{1+z}{H_0}\left[(1+z')^{\frac{-3(1+w)+2}{2}}\cdot \frac{2}{-3(1+w)+2}\right]_0^z\\
+				&=\frac{1+z}{H_0}\left(\frac{2}{-3(1+w)+2}\right)\left[(1+z')^{\frac{-3(1+w)+2}{2}}-1\right]
+\end{align*}	
+It follows:
+$d_{lum_2}(z)>d_{lum_1}(z)$, because the exponent $\frac{-3(1+w)+2}{2}$ is positive $(w<-\frac{1}{3})$,
+so $d_{lum_2}(z)$ is growing faster, than the logarithmic function $d_{lum_1}(z)$.		
+			\item
+			\item
+			\item
+		\end{enumerate}
+		
+	\end{enumerate}
+\end{document}

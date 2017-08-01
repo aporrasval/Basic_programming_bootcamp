@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\newcommand{\question}[2]{\textbf{\textit{#1}}\quad{\footnotesize\textit{(#2 points)}}\\[3mm]}
+\newcommand{\question}[1]{\textbf{\textit{#1}}}
+\newcommand{\points}[1]{\quad{\footnotesize\textit{(#1 points)}}}
+\newcommand{\point}{\quad{\footnotesize\textit{(1 point)}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\pi}{\uppi}
+\newcommand{\ci}{\mathrm{i}}
+\renewcommand{\thefootnote}{\normalsize\fnsymbol{footnote}}
+\DeclareMathOperator{\e}{e}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\renewcommand{\theequation}{\Roman{equation}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\LARGE \textbf{Astronomy from 4 perspectives: the Dark Universe}
+\HRule
+\end{center}
+\begin{flushright}
+prepared by: Jena participants
+\end{flushright}
+\begin{center}
+{\Large \textbf{exercise: Dark matter and galaxy rotation curves}}
+\end{center}
+\vspace{5mm}
+
+\begin{enumerate}[\itshape \bfseries 1.]
+
+
+\item \question{harmonic oscillator and energy types}\\
+The harmonic oscillator is described the the differential equation $\ddot{x} = -g/l\: x$, and performs harmonic oscillations $x(t)\propto\exp(\pm\ci\omega t)$ with $\omega^2 = g/l$.
+\begin{enumerate}[(a)]
+\item{Please show that $\bra T\ket = \bra V\ket$ with the kinetic energy $T$ and the potential energy $V$. The brackets $\bra\ldots\ket$ are time averages over one oscillation period $\tau$,
+\begin{equation}
+\bra T\ket = \frac{1}{\tau}\int_0^\tau\dd t\:T(t)
+\quad\mathrm{and}\quad
+\bra V\ket = \frac{1}{\tau}\int_0^\tau\dd t\:V(t)
+\end{equation}
+which is defined as $\tau = 2\pi/\omega$, and the specific energies $T(t) = \dot{x}^2/2$ and $V(t) = gx^2$/(2l).}
+\item{Could you predict the proportionality between $\bra T\ket$ and $\bra V\ket$ from the isochrony of the harmonic oscillator?}
+\end{enumerate}
+The probability of finding the oscillator at a certain amplitude $x$ is inversely proportional to the velocity: $\dd x/\dd t = \upsilon$, such that $\Delta t = \Delta x/\upsilon$. If the range of motion is divided into equidistant intervals $\Delta x$, the probability $p$ of seeing the oscillator in one of those is proportional to the time it spends there, i.e. proportional to $1/\left|\upsilon\right|$.
+\begin{enumerate}[(a)]
+\setcounter{enumii}{2}
+\item{Please normalise $p$ and draw the function $p(\upsilon)$: If you look randomly at a harmonic oscillator, at what stage in its oscillation are you most likely to see it?}
+\item{Please define averages
+\begin{equation}
+\bra T\ket = \int\dd\upsilon\:p(\upsilon)T(\upsilon)
+\quad\mathrm{and}\quad
+\bra V\ket = \int\dd\upsilon\:p(\upsilon)V(\upsilon)
+\end{equation}
+and compute both integrals. You can use energy conservation for the second integral to express $V$ in terms of the velocity $\upsilon$. Are the results identical to the previous computation? Be careful to take the positive sign of $p$ into account, by using the symmetry of the integrand.
+}
+\item{Why is there no issue with convergence when the probability density $p\rightarrow\infty$ at $\upsilon\rightarrow0$?}
+\item{Is the virial relation $\bra T\ket = \bra V\ket$ as well valid for a circular orbit in a spherically symmetric harmonic potential?}
+\item{Is it valid as well for any other Lissajous-figure?}
+\end{enumerate}
+
+
+\item \question{flat rotation curves}\\
+Let's consider the motion of stars inside a galaxy with the density profile of a {\em singular isothermal sphere}, which is $\rho\propto r^{-2}$. The singular isothermal sphere describes the density of dark matter well on scales of the galactic disc.
+\begin{enumerate}[(a)]
+\item{Please show by solving the Poisson equation $\Delta\Phi = 4\pi G\rho$,
+\begin{equation}
+\Delta\Phi = \frac{1}{r^2}\frac{\dd}{\dd r}\left(r^2\frac{\dd\Phi}{\dd r}\right) = 4\pi G\rho,
+\end{equation}
+for a spherically symmetric density profile $\rho\propto r^{-2}$ that rotation curves are flat.}
+\item{Please compute the mean kinetic $\bra T\ket$ and mean potential energy $\bra V\ket$ for the circular motion in an isothermal sphere as a function of $r$.}
+\item{Is it possible in this case to decompose the circular orbiting motion into two uncoupled orthogonal harmonic oscillations?}
+\item{What would the density profile need to be such that stars would perform harmonic oscillations through the centre of the galaxy, i.e. for the potential to be quadratic, $\Phi\propto r^{2}$?}
+\end{enumerate}
+
+
+\item \question{MoND, the Solar system and the Milky Way}\\
+Let's assume that we can change the acceleration due to gradients in the gravitational potential $\nabla\Phi$ in an empirical way,
+\begin{equation}
+\frac{\dd\Phi}{\dd r} \rightarrow \frac{\dd\Phi}{\dd r} + a_0,
+\end{equation}
+as it would be relevant for a circular motion around the Milky Way centre in a spherically symmetric potential.
+\begin{enumerate}[(a)]
+\item{What would be the effect on a rotation curve from the density profile $\rho\propto r^{-\alpha}$?}
+\item{The parameter $a_0$ would need to be chosen small: Please estimate an upper bound on the value of $a_0$ from the orbital acceleration of the Solar system on its passage around the Milky Way center. You can find all necessary data on Wikipedia.}
+\item{Please think of a way to visualise the numerical value of $a_0$.}
+\item{At what distance from the Earth's surface would the gravitational acceleration be $a_0$?}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
