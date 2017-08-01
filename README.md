@@ -1,4 +1,4 @@
-
+Costa Rica Bridge
 Computational Bootcamp.
 
 Day 1: Teaching the basics of terminal. Installing python and github using the command line.
